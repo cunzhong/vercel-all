@@ -109,7 +109,7 @@ export default async function handler(req, res) {
     // 检查特殊路径重定向
     if (redirect_paths.includes(url.pathname)) {
       res.setHeader('Location', 'https://088878.xyz');
-      return res.status(000).end();
+      return res.status(302).end();
     }
 
     // 从有效主机名中提取前缀
@@ -178,7 +178,7 @@ export default async function handler(req, res) {
     const response = await fetch(new_url.href, fetchOptions);
 
     // 处理重定向
-    if ([301, 303, 307, 308].includes(response.status)) {
+    if ([301, 302, 303, 307, 308].includes(response.status)) {
       const location = response.headers.get('location');
       if (location) {
         // 修改重定向URL以使用代理域名
