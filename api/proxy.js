@@ -178,7 +178,7 @@ export default async function handler(req, res) {
     const response = await fetch(new_url.href, fetchOptions);
 
     // 处理重定向
-    if ([301, 302, 303, 307, 308].includes(response.status)) {
+    if ([301, 303, 307, 308].includes(response.status)) {
       const location = response.headers.get('location');
       if (location) {
         // 修改重定向URL以使用代理域名
