@@ -6,24 +6,24 @@ const domain_mappings = {
   'avatars.githubusercontent.com': 'gh-avatars-githubusercontent-com.',
   'github.githubassets.com': 'gh-github-githubassets-com.',
   'collector.github.com': 'gh-collector-github-com.',
-  'api.github.com': 'v-api-github-com.',
+  'api.github.com': 'gh-api-github-com.',
   'raw.githubusercontent.com': 'gh-raw-githubusercontent-com.',
   'gist.githubusercontent.com': 'gh-gist-githubusercontent-com.',
-  'github.io': 'v-github-io.',
+  'github.io': 'gh-github-io.',
   'assets-cdn.github.com': 'gh-assets-cdn-github-com.',
-  'cdn.jsdelivr.net': 'v-cdn.jsdelivr-net.',
+  'cdn.jsdelivr.net': 'gh-cdn.jsdelivr-net.',
   'securitylab.github.com': 'gh-securitylab-github-com.',
   'www.githubstatus.com': 'gh-www-githubstatus-com.',
-  'npmjs.com': 'v-npmjs-com.',
+  'npmjs.com': 'gh-npmjs-com.',
   'git-lfs.github.com': 'gh-git-lfs-github-com.',
   'githubusercontent.com': 'gh-githubusercontent-com.',
   'github.global.ssl.fastly.net': 'gh-github-global-ssl-fastly-net.',
-  'api.npms.io': 'v-api-npms-io.',
-  'github.community': 'v-github-community.'
+  'api.npms.io': 'gh-api-npms-io.',
+  'github.community': 'gh-github-community.'
 };
 
 // 需要重定向的路径
-const redirect_paths = ['/', '/login', '/signup', '/copilot'];
+const redirect_paths = ['/login', '/signup', '/copilot'];
 
 // 获取当前主机名的前缀，用于匹配反向映射
 function getProxyPrefix(host) {
