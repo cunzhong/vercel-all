@@ -2,7 +2,7 @@
 
 // 域名映射配置
 const domain_mappings = {
-  'google.com': 'al.',
+  'fbi.088878.xyz': 'al.',
 };
 
 // 需要重定向的路径
