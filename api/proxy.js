@@ -2,24 +2,7 @@
 
 // 域名映射配置
 const domain_mappings = {
-  'github.com': 'gh.',
-  'avatars.githubusercontent.com': 'gh-avatars-githubusercontent-com.',
-  'github.githubassets.com': 'gh-github-githubassets-com.',
-  'collector.github.com': 'gh-collector-github-com.',
-  'api.github.com': 'gh-api-github-com.',
-  'raw.githubusercontent.com': 'gh-raw-githubusercontent-com.',
-  'gist.githubusercontent.com': 'gh-gist-githubusercontent-com.',
-  'github.io': 'gh-github-io.',
-  'assets-cdn.github.com': 'gh-assets-cdn-github-com.',
-  'cdn.jsdelivr.net': 'gh-cdn.jsdelivr-net.',
-  'securitylab.github.com': 'gh-securitylab-github-com.',
-  'www.githubstatus.com': 'gh-www-githubstatus-com.',
-  'npmjs.com': 'gh-npmjs-com.',
-  'git-lfs.github.com': 'gh-git-lfs-github-com.',
-  'githubusercontent.com': 'gh-githubusercontent-com.',
-  'github.global.ssl.fastly.net': 'gh-github-global-ssl-fastly-net.',
-  'api.npms.io': 'gh-api-npms-io.',
-  'github.community': 'gh-github-community.'
+  'fbi.15896779059.workers.dev': 'al.',
 };
 
 // 需要重定向的路径
@@ -27,9 +10,9 @@ const redirect_paths = ['/login', '/signup', '/copilot'];
 
 // 获取当前主机名的前缀，用于匹配反向映射
 function getProxyPrefix(host) {
-  // 检查主机名是否以 gh. 开头
-  if (host.startsWith('gh.')) {
-    return 'gh.';
+  // 检查主机名是否以 al. 开头
+  if (host.startsWith('al.')) {
+    return 'al.';
   }
   
   // 检查其他映射前缀
@@ -78,7 +61,7 @@ async function modifyResponse(response, host_prefix, effective_hostname) {
   }
 
   // 处理相对路径
-  if (host_prefix === 'gh.') {
+  if (host_prefix === 'al.') {
     text = text.replace(
       /(?<=["'])\/(?!\/|[a-zA-Z]+:)/g,
       `https://${effective_hostname}/`
