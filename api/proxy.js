@@ -2,7 +2,7 @@
 
 // 域名映射配置
 const domain_mappings = {
-  'shows.youtube.com': 'al.',
+  'google.com': 'al.',
 };
 
 // 需要重定向的路径
